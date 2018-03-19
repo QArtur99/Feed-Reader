@@ -1,7 +1,6 @@
 # Frontend Nanodegree Feed Reader
 
-### How to run the game
-- Go to: [**Link**](https://htmlpreview.github.io/?https://github.com/QArtur99/Feed-Reader/blob/master/index.html "Link")
+## How to run the Feed Reader
 - Clone or download repository as a zip file and open index.html file in your browser
 
 ## Project Overview
