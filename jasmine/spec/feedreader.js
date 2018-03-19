@@ -30,7 +30,7 @@ $(function() {
      */
     it('urls are defined', function() {
       allFeeds.forEach(feed => {
-        expect(feed.hasOwnProperty('url') && feed.url.length != 0).toBe(true);
+        expect(feed.hasOwnProperty('url') && feed.url.length !== 0).toBe(true);
       });
     });
 
@@ -42,10 +42,10 @@ $(function() {
 
     it('names are defined', function() {
       allFeeds.forEach(feed => {
-        expect(feed.hasOwnProperty('name') && feed.name.length != 0).toBe(true);
+        expect(feed.hasOwnProperty('name') && feed.name.length !== 0).toBe(true);
       });
     });
-  })
+  });
 
   /* The test suite named "The menu" */
   describe('The menu', function() {
@@ -69,7 +69,7 @@ $(function() {
       expect($('body').hasClass('menu-hidden')).toBe(true);
     });
 
-  })
+  });
 
 
   /* The test suite named "Initial Entries" */
@@ -84,10 +84,10 @@ $(function() {
 
     it('loadFeed is completed', function() {
       const entries = $('.feed .entry');
-      expect(entries.length != 0).toBe(true);
+      expect(entries.length !== 0).toBe(true);
     });
 
-  })
+  });
 
   /* The test suite named "New Feed Selection" */
   describe('Initial Entries', function() {
@@ -103,8 +103,8 @@ $(function() {
 
     it('loadFeed has changed a content', function() {
       const afterLoaded = $('.feed .entry')[0];
-      expect(beforeLoaded != afterLoaded).toBe(true);
+      expect(beforeLoaded !== afterLoaded).toBe(true);
     });
 
-  })
+  });
 }());
