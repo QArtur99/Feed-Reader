@@ -94,16 +94,20 @@ $(function() {
     /* Test that ensures when a new feed is loaded
      * by the loadFeed function that the content actually changes.
      */
-    let beforeLoaded;
+    let prevFeed, newFeed;
 
     beforeEach(function(done) {
-      beforeLoaded = $('.feed .entry')[0];
-      loadFeed(0, done);
+      loadFeed(0, function() {
+        prevFeed = $('.feed .entry')[0];
+        loadFeed(1, function() {
+          newFeed = $('.feed .entry')[0];
+          done();
+        });
+      });
     });
 
     it('loadFeed has changed a content', function() {
-      const afterLoaded = $('.feed .entry')[0];
-      expect(beforeLoaded !== afterLoaded).toBe(true);
+      expect(prevFeed !== newFeed).toBe(true);
     });
 
   });
